@@ -3,7 +3,8 @@ from rest_framework import generics
 from .models import Libro
 from .serializers import LibroSerializer
 
-class ListaLibrosView(generics.ListCreateAPIView): ###generics.ListCreateAPIView. vista genérica proporcionada por DRF para listar (get) y crear objetos (post).
+class ListaLibrosView(generics.ListCreateAPIView): ###generics.ListCreateAPIView. vista genérica 
+    ##proporcionada por DRF para listar (get) y crear objetos (post).
     queryset = Libro.objects.all()
     serializer_class = LibroSerializer
 
